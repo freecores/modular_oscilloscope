@@ -1,0 +1,161 @@
+KEY LIBERO "8.4"
+KEY CAPTURE "8.4.1.13"
+KEY DEFAULT_IMPORT_LOC "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp"
+KEY DEFAULT_OPEN_LOC ""
+KEY HDLTechnology "VHDL"
+KEY VendorTechnology_Family "ProASIC3E"
+KEY VendorTechnology_Die "IT10X10M3"
+KEY VendorTechnology_Package "fg484"
+KEY ProjectLocation "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\design\RVI\modullar_oscilloscope"
+KEY SimulationType "VHDL"
+KEY Vendor "Actel"
+LIST REVISIONS
+VALUE="Impl1",NUM=1
+CURREV=1
+ENDLIST
+LIST FileManager
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\adq\adq.vhd,hdl"
+STATE="utd"
+TIME="1227491351"
+SIZE="0"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\ctrl\ctrl.vhd,hdl"
+STATE="utd"
+TIME="1227491351"
+SIZE="11"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn-ctrl.vhd,hdl"
+STATE="utd"
+TIME="1227491351"
+SIZE="10"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn-epp-side.vhd,hdl"
+STATE="utd"
+TIME="1227491351"
+SIZE="10"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn-wbn-side.vhd,hdl"
+STATE="utd"
+TIME="1227491351"
+SIZE="10"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn.vhd,hdl"
+STATE="utd"
+TIME="1227532681"
+SIZE="1190"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\lo_oscilloscope.vhd,hdl"
+STATE="utd"
+TIME="1227491351"
+SIZE="77"
+IS_READONLY="TRUE"
+ENDFILE
+ENDLIST
+LIST UsedFile
+ENDLIST
+LIST NewModulesInfo
+ENDLIST
+LIST AssociatedStimulus
+ENDLIST
+LIST Other_Association
+ENDLIST
+LIST SimulationOptions
+UseAutomaticDoFile=true
+IncludeWaveDo=false
+Type=max
+RunTime=1000ns
+Resolution=1ps
+VsimOpt=
+EntityName=testbench
+TopInstanceName=<top>_0
+DoFileName=
+DoFileName2=wave.do
+DoFileParams=
+DisplayDUTWave=false
+LogAllSignals=false
+DumpVCD=false
+VCDFileName=power.vcd
+ENDLIST
+LIST ModelSimLibPath
+UseCustomPath=FALSE
+LibraryPath=
+ENDLIST
+LIST GlobalFlowOptions
+GenerateHDLAfterSynthesis=FALSE
+GenerateHDLAfterPhySynthesis=FALSE
+RunDRCAfterSynthesis=FALSE
+UpdateViewDrawIni=TRUE
+UpdateModelSimIni=TRUE
+NoIOMode=FALSE
+GenerateHDLFromSchematic=TRUE
+FlashProInputFile=pdb
+SmartGenCompileReport=T
+ENDLIST
+LIST PhySynthesisOptions
+ENDLIST
+LIST Profiles
+Type=CoreConfigurator
+Profile=CoreConsole
+Tool=CoreConsole v1.3 or later
+Location=coreconsole
+AdditionalParameter=
+Batch=false
+EndProfile
+Type=Synthesis
+Profile=Synplify
+Tool=Synplify
+Location=D:\Programas\Libero\Libero_v8.4\Synplify\synplify_94A1\bin\Synplify.exe
+AdditionalParameter=
+Batch=false
+EndProfile
+Type=Simulation
+Profile=ModelSim
+Tool=ModelSim
+Location=D:\Programas\Libero\Libero_v8.4\Model\win32acoem\modelsim.exe
+AdditionalParameter=
+Batch=false
+EndProfile
+Type=Stimulus
+Profile=WFL
+Tool=WFL
+Location=D:\Programas\Libero\Libero_v8.4\WFL\bin\syncad.exe
+AdditionalParameter=-pwflite
+Batch=false
+EndProfile
+Type=PhySynthesis
+Profile=
+Tool=
+Location=
+AdditionalParameter=
+Batch=false
+EndProfile
+Type=Program
+Profile=FlashPro
+Tool=FlashPro
+Location=D:\Programas\Libero\Libero_v8.4\FlashPro\bin\FlashPro.exe
+AdditionalParameter=
+Batch=false
+EndProfile
+ENDLIST
+LIST ProjectState5.1
+ENDLIST
+LIST ExcludePackageForSimulation
+ENDLIST
+LIST ExcludePackageForSynthesis
+ENDLIST
+LIST IncludeModuleForSimulation
+ENDLIST
+LIST CDBOrder
+ENDLIST
+LIST UserCustomizedFileList
+ENDLIST
+LIST OpenedFileList
+DESIGNFLOW:
+ACTIVE_VIEW:0
+ENDLIST
