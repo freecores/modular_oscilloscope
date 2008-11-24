@@ -1,7 +1,6 @@
--- eppwbn.vhd
--- Bloque completo
+-- epp.vhd
 
-entity eppwbn is
+entity eppwbn_epp_side is
 port(
 	-- Externo
 	nStrobe: in std_logic; 						-- Nomenclatura IEEE Std. 1284 ECP/EPP (Compatibiliy)
@@ -18,22 +17,5 @@ port(
 	nSelectIn: in std_logic; 					--  1284 Active/nAStrb
 	HostLogicH: in std_logic; 					--  (Host Logic High)
 	
-	--  Interno
-	RST_I: in std_logic;  
-	CLK_I: in std_logic;  
-	DAT_I: in std_logic_vector (15 downto 0);
-	ADR_I: in std_logic_vector (15 downto 0);
-	DAT_O: out std_logic_vector (15 downto 0);
-	ADR_O: out std_logic_vector (15 downto 0);
-	CYC_I: in std_logic;  
-	ACK_O: out std_logic;  
-	WE_I: in std_logic;  
-	);
-end eppwbn;
-	
-	
-architecture wbn16epp8 of eppwbn
-	
-begin
-
+end eppwbn_epp_side
 
