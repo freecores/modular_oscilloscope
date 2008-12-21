@@ -54,7 +54,7 @@ port(
 );
 end entity eppwbn_ctrl;
 
-architecture
+
 architecture state_machines of eppwbn_ctrl is
 	type StateType is (
           st_compatibility_idle,  -- Los estados corresponden a los especificados
