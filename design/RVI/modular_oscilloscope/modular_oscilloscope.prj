@@ -1,0 +1,276 @@
+KEY LIBERO "8.5"
+KEY CAPTURE "8.5.0.34"
+KEY DEFAULT_IMPORT_LOC "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp"
+KEY DEFAULT_OPEN_LOC ""
+KEY HDLTechnology "VHDL"
+KEY VendorTechnology_Family "ProASIC3E"
+KEY VendorTechnology_Die "IT10X10M3"
+KEY VendorTechnology_Package "fg484"
+KEY ProjectLocation "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\design\RVI\modular_oscilloscope"
+KEY SimulationType "VHDL"
+KEY Vendor "Actel"
+KEY ActiveRoot "eppwbn::work"
+LIST REVISIONS
+VALUE="Impl1",NUM=1
+CURREV=1
+ENDLIST
+LIST FileManager
+VALUE "<project>\designer\impl1\eppwbn.adb,adb"
+STATE="ood"
+TIME="1229186980"
+SIZE="167936"
+ENDFILE
+VALUE "<project>\simulation\run.do,do"
+STATE="utd"
+TIME="1229183939"
+SIZE="1040"
+ENDFILE
+VALUE "<project>\stimulus\eppwbn_ctrl_tbench.btim,btim"
+STATE="utd"
+TIME="1228856277"
+SIZE="6501"
+ENDFILE
+VALUE "<project>\stimulus\eppwbn_ctrl_tbench.vhd,tb_hdl"
+STATE="utd"
+TIME="1228856282"
+SIZE="6345"
+ENDFILE
+VALUE "<project>\stimulus\eppwbn_wbn_side_tbench.btim,btim"
+STATE="utd"
+TIME="1228851973"
+SIZE="10956"
+ENDFILE
+VALUE "<project>\stimulus\eppwbn_wbn_side_tbench.vhd,tb_hdl"
+STATE="utd"
+TIME="1228851732"
+SIZE="5265"
+ENDFILE
+VALUE "<project>\synthesis\eppwbn.edn,syn_edn"
+STATE="utd"
+TIME="1229473867"
+SIZE="87400"
+ENDFILE
+VALUE "<project>\synthesis\eppwbn_ctrl.edn,syn_edn"
+STATE="ood"
+TIME="1228857928"
+SIZE="31655"
+ENDFILE
+VALUE "<project>\synthesis\eppwbn_ctrl.vhd,syn_hdl"
+STATE="ood"
+TIME="1228857978"
+SIZE="13117"
+ENDFILE
+VALUE "<project>\synthesis\eppwbn_ctrl_sdc.sdc,syn_sdc"
+STATE="ood"
+TIME="1228857928"
+SIZE="450"
+ENDFILE
+VALUE "<project>\synthesis\eppwbn_sdc.sdc,syn_sdc"
+STATE="utd"
+TIME="1229473867"
+SIZE="448"
+ENDFILE
+VALUE "<project>\viewdraw\sym\eppwbn_ctrl.1,sym"
+STATE="utd"
+TIME="1228878361"
+SIZE="2368"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn.vhd,hdl"
+STATE="utd"
+TIME="1229471193"
+SIZE="3934"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn_ctrl.vhd,hdl"
+STATE="utd"
+TIME="1229147377"
+SIZE="7128"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn_epp_side.vhd,hdl"
+STATE="utd"
+TIME="1228777281"
+SIZE="4164"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn_pkg.vhd,hdl"
+STATE="utd"
+TIME="1229473735"
+SIZE="2834"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn_wbn_side.vhd,hdl"
+STATE="utd"
+TIME="1228846986"
+SIZE="4320"
+IS_READONLY="TRUE"
+ENDFILE
+ENDLIST
+LIST UsedFile
+ENDLIST
+LIST NewModulesInfo
+LIST "eppwbn::work"
+FILE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn.vhd,hdl"
+LIST ProjectState5.1
+LIST Impl1
+LiberoState=Post_Synthesis
+ideSYNTHESIS(<project>\synthesis\eppwbn.edn,syn_edn)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "eppwbn_ctrl::work::eppwbn_pgk"
+FILE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn_ctrl.vhd,hdl"
+LIST AssociatedStimulus
+VALUE "<project>\stimulus\eppwbn_ctrl_tbench.vhd,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+VALUE "<project>\synthesis\eppwbn_ctrl.edn,syn_edn"
+VALUE "<project>\synthesis\eppwbn_ctrl_sdc.sdc,syn_sdc"
+VALUE "<project>\synthesis\eppwbn_ctrl.vhd,syn_hdl"
+VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.edn,palace_edn"
+VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.gcf,palace_gcf"
+VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.pdc,palace_pdc"
+VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.sdc,palace_sdc"
+VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.vhd,palace_hdl"
+VALUE "<project>\designer\impl1\eppwbn_ctrl.adb,adb"
+VALUE "<project>\designer\impl1\eppwbn_ctrl.prb,prb"
+VALUE "<project>\designer\impl1\eppwbn_ctrl.stp,stp"
+VALUE "<project>\designer\impl1\eppwbn_ctrl_fp\eppwbn_ctrl.pro,pro"
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+LIST eppwbn_ctrl
+VALUE "<project>\stimulus\eppwbn_ctrl_tbench.vhd,tb_hdl"
+ENDLIST
+ENDLIST
+LIST Other_Association
+ENDLIST
+LIST SimulationOptions
+UseAutomaticDoFile=true
+IncludeWaveDo=false
+Type=max
+RunTime=-all
+Resolution=1ps
+VsimOpt=
+EntityName=testbench
+TopInstanceName=<top>_0
+DoFileName=
+DoFileName2=wave.do
+DoFileParams=
+DisplayDUTWave=false
+LogAllSignals=false
+DumpVCD=false
+VCDFileName=power.vcd
+ENDLIST
+LIST ModelSimLibPath
+UseCustomPath=FALSE
+LibraryPath=D:/Programas/Libero/Libero_v8.4/Designer/lib/modelsim/precompiled/vhdl/proasic3e
+ENDLIST
+LIST GlobalFlowOptions
+GenerateHDLAfterSynthesis=FALSE
+GenerateHDLAfterPhySynthesis=FALSE
+RunDRCAfterSynthesis=FALSE
+AutoCheckConstraints=TRUE
+UpdateViewDrawIni=TRUE
+UpdateModelSimIni=TRUE
+NoIOMode=FALSE
+GenerateHDLFromSchematic=TRUE
+FlashProInputFile=pdb
+SmartGenCompileReport=T
+ENDLIST
+LIST PhySynthesisOptions
+ENDLIST
+LIST Profiles
+NAME="Synplify AE"
+FUNCTION="Synthesis"
+TOOL="Synplify"
+LOCATION="D:\Programas\Libero\Libero_v8.5\Synplify\synplify_96A\bin\Synplify.exe"
+PARAM=""
+BATCH=0
+EndProfile
+NAME="ModelSim AE"
+FUNCTION="Simulation"
+TOOL="ModelSim"
+LOCATION="D:\Programas\Libero\Libero_v8.5\Model\win32acoem\modelsim.exe"
+PARAM=""
+BATCH=0
+EndProfile
+NAME="WFL"
+FUNCTION="Stimulus"
+TOOL="WFL"
+LOCATION="D:\Programas\Libero\Libero_v8.5\WFL\bin\syncad.exe"
+PARAM="-pwflite"
+BATCH=0
+EndProfile
+NAME="FlashPro"
+FUNCTION="Program"
+TOOL="FlashPro"
+LOCATION="D:\Programas\Libero\Libero_v8.5\FlashPro\bin\FlashPro.exe"
+PARAM=""
+BATCH=0
+EndProfile
+ENDLIST
+LIST ProjectState5.1
+LIST "eppwbn::work"
+LIST Impl1
+LiberoState=Post_Synthesis
+ideSYNTHESIS(<project>\synthesis\eppwbn.edn,syn_edn)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "eppwbn_ctrl::work::eppwbn_pgk"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+VALUE "<project>\synthesis\eppwbn_ctrl.edn,syn_edn"
+VALUE "<project>\synthesis\eppwbn_ctrl_sdc.sdc,syn_sdc"
+VALUE "<project>\synthesis\eppwbn_ctrl.vhd,syn_hdl"
+VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.edn,palace_edn"
+VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.gcf,palace_gcf"
+VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.pdc,palace_pdc"
+VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.sdc,palace_sdc"
+VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.vhd,palace_hdl"
+VALUE "<project>\designer\impl1\eppwbn_ctrl.adb,adb"
+VALUE "<project>\designer\impl1\eppwbn_ctrl.prb,prb"
+VALUE "<project>\designer\impl1\eppwbn_ctrl.stp,stp"
+VALUE "<project>\designer\impl1\eppwbn_ctrl_fp\eppwbn_ctrl.pro,pro"
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST ExcludePackageForSimulation
+ENDLIST
+LIST ExcludePackageForSynthesis
+ENDLIST
+LIST IncludeModuleForSimulation
+ENDLIST
+LIST CDBOrder
+ENDLIST
+LIST UserCustomizedFileList
+ENDLIST
+LIST OpenedFileList
+ENDLIST

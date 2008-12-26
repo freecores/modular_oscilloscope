@@ -1,3 +1,16 @@
--- epp.vhd
--- Módulo principal integrador
--- Pequeña modificación de prueba
+--|-----------------------------------------------------------------------------
+--| UNSL - Modular Oscilloscope
+--|
+--| File: eppwbn_wbn_side.vhd
+--| Version: 0.10
+--| Targeted device: Actel A3PE1500 
+--|-----------------------------------------------------------------------------
+--| Description:
+--|   Top module
+--------------------------------------------------------------------------------
+--| File history:
+--|   
+--------------------------------------------------------------------------------
+--| Copyright Facundo Aguilera 2008
+--| GPL
+
