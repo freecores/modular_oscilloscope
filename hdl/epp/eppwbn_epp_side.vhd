@@ -1,31 +1,31 @@
---------------------------------------------------------------------------------
--- UNSL - Modular Oscilloscope
---
--- File: eppwbn_wbn_side.vhd
--- Version: 0.01
--- Targeted device: Actel A3PE1500
---------------------------------------------------------------------------------
--- Description:
--- 	EPP - Wishbone bridge.
---  	EPP module output control (IEEE Std. 1284-2000).
+--|------------------------------------------------------------------------------
+--| UNSL - Modular Oscilloscope
+--|
+--| File: eppwbn_epp_side.vhd
+--| Version: 0.01
+--| Targeted device: Actel A3PE1500
+--|------------------------------------------------------------------------------
+--| Description:
+--| 	EPP - Wishbone bridge.
+--|  	EPP module output control (IEEE Std. 1284-2000).
 -------------------------------------------------------------------------------
--- File history:
--- 	0.01	| nov-2008 | First release
+--| File history:
+--| 	0.01	| nov-2008 | First release
 --------------------------------------------------------------------------------
--- Copyright Facundo Aguilera 2008
--- GPL
+--| Copyright ® 2008, Facundo Aguilera.
+--|
+--| This VHDL design file is an open design; you can redistribute it and/or
+--| modify it and/or implement it after contacting the author.
+
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
-
--- Este fichero debe ser modificado ante casi cualquier modificaci?n de la arquitectura.
 
 entity eppwbn_epp_side is
 port(
 
   -- Selección de modo
-  epp_mode: in std_logic_vector (1 downto 0);-- indicador de modo de comunicaci?n epp
+  epp_mode: in std_logic_vector (1 downto 0);-- indicador de modo de comunicación epp
     -- "00" deshabilitado
     -- "01" inicial (señales de usuario e interrupciones deshabilitadas)
     -- "10" sin definir
@@ -46,7 +46,7 @@ port(
   wb_nAutoFd:    out std_logic;               -- HostBusy/HostAck/nDStrb
 	wb_nSelectIn:  out std_logic;               -- 1284 Active/nAStrb
 	wb_nStrobe:    out std_logic;               -- HostClk/nWrite
-    -- No están implementadas las se?ales personalizadas
+    -- No están implementadas las señales personalizadas
 
   -- To EPP port
 	nAck:   out std_logic;                  -- PtrClk/PeriphClk/Intr
@@ -75,7 +75,7 @@ begin
   ctr_nStrobe <= nStrobe;
 
   -- Selección de salidas desde el módulo EPP cuando epp_mode = "11"
-  --  Como no están implementadas las se?ales personalizadas se escribe "0000"
+  --  Como no están implementadas las señales personalizadas se escribe "0000"
   multiplexing: process (epp_mode ,ctr_nAck, ctr_PError, ctr_Sel, ctr_nFault,
   						nAutoFd, nSelectIn, nStrobe) begin
     case epp_mode is

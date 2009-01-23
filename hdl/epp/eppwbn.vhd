@@ -2,18 +2,20 @@
 --| UNSL - Modular Oscilloscope
 --|
 --| File: eppwbn_wbn_side.vhd
---| Version: 0.10
+--| Version: 0.01
 --| Targeted device: Actel A3PE1500 
 --|-----------------------------------------------------------------------------
 --| Description:
 --|   EPP - Wishbone bridge. 
---|	  This instantiate all the other modules. The TOP
+--|	  Instantiate all the other modules. The TOP file.
 --------------------------------------------------------------------------------
 --| File history:
---|   0.01  | dic-2008 | First testing release
+--|   0.01  | dic-2008 | First release
 --------------------------------------------------------------------------------
---| Copyright Facundo Aguilera 2008
---| GPL
+--| Copyright ® 2008, Facundo Aguilera.
+--|
+--| This VHDL design file is an open design; you can redistribute it and/or
+--| modify it and/or implement it after contacting the author.
 
 
 -- Bloque completo
@@ -99,7 +101,7 @@ begin
 			epp_mode => s_epp_mode
 	);
 
-			-- Conexión de módulo multiplexor
+	-- Conexión de módulo multiplexor
 	U2:  eppwbn_epp_side
 		port map (
 			epp_mode => s_epp_mode, 

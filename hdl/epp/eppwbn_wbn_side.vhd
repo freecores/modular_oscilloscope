@@ -1,19 +1,21 @@
---------------------------------------------------------------------------------
--- UNSL - Modular Oscilloscope
---
--- File: eppwbn_wbn_side.vhd
--- Version: 0.20
--- Targeted device: Actel A3PE1500 
---------------------------------------------------------------------------------
--- Description:
--- 	EPP - Wishbone bridge. 
---  	This module is in the wishbone side (IEEE Std. 1284-2000).
+--|------------------------------------------------------------------------------
+--| UNSL - Modular Oscilloscope
+--|
+--| File: eppwbn_wbn_side.vhd
+--| Version: 0.20
+--| Targeted device: Actel A3PE1500 
+--|------------------------------------------------------------------------------
+--| Description:
+--| 	EPP - Wishbone bridge. 
+--|  	This module is in the wishbone side (IEEE Std. 1284-2000).
 -------------------------------------------------------------------------------
--- File history:
--- 	0.01	| nov-2008 | First release
+--| File history:
+--| 	0.01	| nov-2008 | First release
 --------------------------------------------------------------------------------
--- Copyright Facundo Aguilera 2008
--- GPL
+--| Copyright ® 2008, Facundo Aguilera.
+--|
+--| This VHDL design file is an open design; you can redistribute it and/or
+--| modify it and/or implement it after contacting the author.
 
 
 
@@ -39,7 +41,7 @@ port(
 	-- inFault: out std_logic; 									-- nDataAvail/nPeriphRequest
 	inSelectIn: in std_logic; 									-- 1284 Active/nAStrb
 	-- iHostLogicH: in std_logic; 							-- (Host Logic High)
-	-- i indica misma señal de salida al puerto, aunque interna en el core y controlada por el bloque de control
+	-- i indica interna en el core y controlada por el bloque de control
 	
 	--  a la interface wishbone
 	RST_I: in std_logic;  
