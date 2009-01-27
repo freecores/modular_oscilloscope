@@ -1,15 +1,15 @@
 KEY LIBERO "8.5"
 KEY CAPTURE "8.5.0.34"
-KEY DEFAULT_IMPORT_LOC "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp"
+KEY DEFAULT_IMPORT_LOC "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\design\RVI\modular_oscilloscope\stimulus"
 KEY DEFAULT_OPEN_LOC ""
 KEY HDLTechnology "VHDL"
 KEY VendorTechnology_Family "ProASIC3E"
 KEY VendorTechnology_Die "IT10X10M3"
 KEY VendorTechnology_Package "fg484"
-KEY ProjectLocation "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\design\RVI\modular_oscilloscope"
+KEY ProjectLocation "K:\Documentos_win\Uni\TF\desarrollo\modular_oscilloscope\design\RVI\modular_oscilloscope"
 KEY SimulationType "VHDL"
 KEY Vendor "Actel"
-KEY ActiveRoot "eppwbn::work"
+KEY ActiveRoot "eppwbn_test::work"
 LIST REVISIONS
 VALUE="Impl1",NUM=1
 CURREV=1
@@ -20,10 +20,15 @@ STATE="ood"
 TIME="1229186980"
 SIZE="167936"
 ENDFILE
+VALUE "<project>\hdl\eppwbn_test_tbench.vhd,hdl"
+STATE="utd"
+TIME="1232899806"
+SIZE="6446"
+ENDFILE
 VALUE "<project>\simulation\run.do,do"
 STATE="utd"
-TIME="1229183939"
-SIZE="1040"
+TIME="1233015677"
+SIZE="955"
 ENDFILE
 VALUE "<project>\stimulus\eppwbn_ctrl_tbench.btim,btim"
 STATE="utd"
@@ -32,8 +37,38 @@ SIZE="6501"
 ENDFILE
 VALUE "<project>\stimulus\eppwbn_ctrl_tbench.vhd,tb_hdl"
 STATE="utd"
-TIME="1228856282"
-SIZE="6345"
+TIME="1232899703"
+SIZE="6107"
+ENDFILE
+VALUE "<project>\stimulus\eppwbn_test2_tbench.vhd,tb_hdl"
+STATE="utd"
+TIME="1232900061"
+SIZE="8370"
+ENDFILE
+VALUE "<project>\stimulus\eppwbn_test_tbench.btim,btim"
+STATE="utd"
+TIME="1232931541"
+SIZE="14232"
+ENDFILE
+VALUE "<project>\stimulus\eppwbn_test_tbench.vhd,tb_hdl"
+STATE="utd"
+TIME="1232899965"
+SIZE="6745"
+ENDFILE
+VALUE "<project>\stimulus\eppwbn_test_wb_side_tbench.btim,btim"
+STATE="utd"
+TIME="1232938789"
+SIZE="5977"
+ENDFILE
+VALUE "<project>\stimulus\eppwbn_test_wb_side_tbench.vhd,tb_hdl"
+STATE="utd"
+TIME="1232938812"
+SIZE="5398"
+ENDFILE
+VALUE "<project>\stimulus\eppwbn_test_wb_side_tbench2.vhd,tb_hdl"
+STATE="utd"
+TIME="1232936283"
+SIZE="3961"
 ENDFILE
 VALUE "<project>\stimulus\eppwbn_wbn_side_tbench.btim,btim"
 STATE="utd"
@@ -46,7 +81,7 @@ TIME="1228851732"
 SIZE="5265"
 ENDFILE
 VALUE "<project>\synthesis\eppwbn.edn,syn_edn"
-STATE="utd"
+STATE="ood"
 TIME="1229473867"
 SIZE="87400"
 ENDFILE
@@ -66,59 +101,116 @@ TIME="1228857928"
 SIZE="450"
 ENDFILE
 VALUE "<project>\synthesis\eppwbn_sdc.sdc,syn_sdc"
-STATE="utd"
+STATE="ood"
 TIME="1229473867"
 SIZE="448"
+ENDFILE
+VALUE "<project>\synthesis\eppwbn_test.edn,syn_edn"
+STATE="ood"
+TIME="1232899905"
+SIZE="2821339"
+ENDFILE
+VALUE "<project>\synthesis\eppwbn_test.vhd,syn_hdl"
+STATE="ood"
+TIME="1232899931"
+SIZE="989947"
+ENDFILE
+VALUE "<project>\synthesis\eppwbn_test_sdc.sdc,syn_sdc"
+STATE="ood"
+TIME="1232899904"
+SIZE="446"
 ENDFILE
 VALUE "<project>\viewdraw\sym\eppwbn_ctrl.1,sym"
 STATE="utd"
 TIME="1228878361"
 SIZE="2368"
 ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\design\RVI\modular_oscilloscope\synthesis\eppwbn.edn,syn_edn"
+STATE="ood"
+TIME="1229473867"
+SIZE="87400"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\design\RVI\modular_oscilloscope\synthesis\eppwbn_ctrl.edn,syn_edn"
+STATE="ood"
+TIME="1228857928"
+SIZE="31655"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\design\RVI\modular_oscilloscope\synthesis\eppwbn_test.edn,syn_edn"
+STATE="ood"
+TIME="1233016069"
+SIZE="2492404"
+ENDFILE
 VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn.vhd,hdl"
 STATE="utd"
-TIME="1229471193"
-SIZE="3934"
+TIME="1232329273"
+SIZE="4064"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn_ctrl.vhd,hdl"
 STATE="utd"
-TIME="1229147377"
-SIZE="7128"
+TIME="1233015636"
+SIZE="7162"
 ENDFILE
 VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn_epp_side.vhd,hdl"
 STATE="utd"
-TIME="1228777281"
-SIZE="4164"
+TIME="1232329193"
+SIZE="4227"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn_pkg.vhd,hdl"
 STATE="utd"
-TIME="1229473735"
-SIZE="2834"
+TIME="1232898847"
+SIZE="6004"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn_test.vhd,hdl"
+STATE="utd"
+TIME="1232898739"
+SIZE="3201"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn_test_wb_side.vhd,hdl"
+STATE="utd"
+TIME="1232937401"
+SIZE="1703"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn_wbn_side.vhd,hdl"
 STATE="utd"
-TIME="1228846986"
-SIZE="4320"
+TIME="1233015609"
+SIZE="4604"
 IS_READONLY="TRUE"
+ENDFILE
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\memory_8bit_reset.vhd,hdl"
+STATE="utd"
+TIME="1233015441"
+SIZE="15623"
 ENDFILE
 ENDLIST
 LIST UsedFile
 ENDLIST
 LIST NewModulesInfo
-LIST "eppwbn::work"
+LIST "eppwbn::work::eppwbn_pgk"
 FILE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn.vhd,hdl"
 LIST ProjectState5.1
 LIST Impl1
-LiberoState=Post_Synthesis
-ideSYNTHESIS(<project>\synthesis\eppwbn.edn,syn_edn)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
 ENDLIST
 Used_File_List
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\design\RVI\modular_oscilloscope\synthesis\eppwbn.edn,syn_edn"
+VALUE "<project>\synthesis\eppwbn_sdc.sdc,syn_sdc"
+VALUE "<project>\synthesis\eppwbn.vhd,syn_hdl"
+VALUE "<project>\phy_synthesis\eppwbn_palace.edn,palace_edn"
+VALUE "<project>\phy_synthesis\eppwbn_palace.gcf,palace_gcf"
+VALUE "<project>\phy_synthesis\eppwbn_palace.pdc,palace_pdc"
+VALUE "<project>\phy_synthesis\eppwbn_palace.sdc,palace_sdc"
+VALUE "<project>\phy_synthesis\eppwbn_palace.vhd,palace_hdl"
+VALUE "<project>\designer\impl1\eppwbn_1.adb,adb"
+VALUE "<project>\designer\impl1\eppwbn.prb,prb"
+VALUE "<project>\designer\impl1\eppwbn.stp,stp"
+VALUE "<project>\designer\impl1\eppwbn_1_fp\eppwbn_1.pro,pro"
 ENDUsed_File_List
 ENDLIST
 ENDLIST
@@ -136,24 +228,76 @@ UsePhySynth=FALSE
 UseSynth=TRUE
 ENDLIST
 Used_File_List
-VALUE "<project>\synthesis\eppwbn_ctrl.edn,syn_edn"
 VALUE "<project>\synthesis\eppwbn_ctrl_sdc.sdc,syn_sdc"
-VALUE "<project>\synthesis\eppwbn_ctrl.vhd,syn_hdl"
 VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.edn,palace_edn"
 VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.gcf,palace_gcf"
 VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.pdc,palace_pdc"
 VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.sdc,palace_sdc"
 VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.vhd,palace_hdl"
-VALUE "<project>\designer\impl1\eppwbn_ctrl.adb,adb"
 VALUE "<project>\designer\impl1\eppwbn_ctrl.prb,prb"
 VALUE "<project>\designer\impl1\eppwbn_ctrl.stp,stp"
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\design\RVI\modular_oscilloscope\synthesis\eppwbn_ctrl.edn,syn_edn"
+VALUE "<project>\synthesis\eppwbn_ctrl.vhd,syn_hdl"
+VALUE "<project>\designer\impl1\eppwbn_ctrl.adb,adb"
 VALUE "<project>\designer\impl1\eppwbn_ctrl_fp\eppwbn_ctrl.pro,pro"
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "eppwbn_test::work"
+FILE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn_test.vhd,hdl"
+LIST AssociatedStimulus
+VALUE "<project>\stimulus\eppwbn_test2_tbench.vhd,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\design\RVI\modular_oscilloscope\synthesis\eppwbn_test.edn,syn_edn"
+VALUE "<project>\synthesis\eppwbn_test_sdc.sdc,syn_sdc"
+VALUE "<project>\synthesis\eppwbn_test.vhd,syn_hdl"
+VALUE "<project>\phy_synthesis\eppwbn_test_palace.edn,palace_edn"
+VALUE "<project>\phy_synthesis\eppwbn_test_palace.gcf,palace_gcf"
+VALUE "<project>\phy_synthesis\eppwbn_test_palace.pdc,palace_pdc"
+VALUE "<project>\phy_synthesis\eppwbn_test_palace.sdc,palace_sdc"
+VALUE "<project>\phy_synthesis\eppwbn_test_palace.vhd,palace_hdl"
+VALUE "<project>\designer\impl1\eppwbn_test.adb,adb"
+VALUE "<project>\designer\impl1\eppwbn_test.prb,prb"
+VALUE "<project>\designer\impl1\eppwbn_test.stp,stp"
+VALUE "<project>\designer\impl1\eppwbn_test_fp\eppwbn_test.pro,pro"
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "eppwbn_test_wb_side::work::eppwbn_pgk"
+FILE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\hdl\epp\eppwbn_test_wb_side.vhd,hdl"
+LIST AssociatedStimulus
+VALUE "<project>\stimulus\eppwbn_test_wb_side_tbench.vhd,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
 ENDUsed_File_List
 ENDLIST
 ENDLIST
 ENDLIST
 ENDLIST
 LIST AssociatedStimulus
+LIST eppwbn_test
+VALUE "<project>\stimulus\eppwbn_test2_tbench.vhd,tb_hdl"
+ENDLIST
+LIST eppwbn_test_wb_side
+VALUE "<project>\stimulus\eppwbn_test_wb_side_tbench.vhd,tb_hdl"
+ENDLIST
 LIST eppwbn_ctrl
 VALUE "<project>\stimulus\eppwbn_ctrl_tbench.vhd,tb_hdl"
 ENDLIST
@@ -179,7 +323,7 @@ VCDFileName=power.vcd
 ENDLIST
 LIST ModelSimLibPath
 UseCustomPath=FALSE
-LibraryPath=D:/Programas/Libero/Libero_v8.4/Designer/lib/modelsim/precompiled/vhdl/proasic3e
+LibraryPath=D:/Programas/Libero/Libero_v8.5/Designer/lib/modelsim/precompiled/vhdl/proasic3e
 ENDLIST
 LIST GlobalFlowOptions
 GenerateHDLAfterSynthesis=FALSE
@@ -196,45 +340,55 @@ ENDLIST
 LIST PhySynthesisOptions
 ENDLIST
 LIST Profiles
-NAME="Synplify AE"
+NAME="Symplify AE free"
 FUNCTION="Synthesis"
 TOOL="Synplify"
-LOCATION="D:\Programas\Libero\Libero_v8.5\Synplify\synplify_96A\bin\Synplify.exe"
+LOCATION="Z:\usr\programas\windows\Actel\Libero_v8.5\Synplify\synplify_96A\bin\synplify.exe"
 PARAM=""
 BATCH=0
 EndProfile
 NAME="ModelSim AE"
 FUNCTION="Simulation"
 TOOL="ModelSim"
-LOCATION="D:\Programas\Libero\Libero_v8.5\Model\win32acoem\modelsim.exe"
+LOCATION="Z:\usr\programas\windows\Actel\Libero_v8.5\Model\win32acoem\modelsim.exe"
 PARAM=""
 BATCH=0
 EndProfile
 NAME="WFL"
 FUNCTION="Stimulus"
 TOOL="WFL"
-LOCATION="D:\Programas\Libero\Libero_v8.5\WFL\bin\syncad.exe"
+LOCATION="Z:\usr\programas\windows\Actel\Libero_v8.5\WFL\bin\syncad.exe"
 PARAM="-pwflite"
 BATCH=0
 EndProfile
 NAME="FlashPro"
 FUNCTION="Program"
 TOOL="FlashPro"
-LOCATION="D:\Programas\Libero\Libero_v8.5\FlashPro\bin\FlashPro.exe"
+LOCATION="Z:\usr\programas\windows\Actel\Libero_v8.5\FlashPro\bin\FlashPro.exe"
 PARAM=""
 BATCH=0
 EndProfile
 ENDLIST
 LIST ProjectState5.1
-LIST "eppwbn::work"
+LIST "eppwbn::work::eppwbn_pgk"
 LIST Impl1
-LiberoState=Post_Synthesis
-ideSYNTHESIS(<project>\synthesis\eppwbn.edn,syn_edn)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
 ENDLIST
 Used_File_List
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\design\RVI\modular_oscilloscope\synthesis\eppwbn.edn,syn_edn"
+VALUE "<project>\synthesis\eppwbn_sdc.sdc,syn_sdc"
+VALUE "<project>\synthesis\eppwbn.vhd,syn_hdl"
+VALUE "<project>\phy_synthesis\eppwbn_palace.edn,palace_edn"
+VALUE "<project>\phy_synthesis\eppwbn_palace.gcf,palace_gcf"
+VALUE "<project>\phy_synthesis\eppwbn_palace.pdc,palace_pdc"
+VALUE "<project>\phy_synthesis\eppwbn_palace.sdc,palace_sdc"
+VALUE "<project>\phy_synthesis\eppwbn_palace.vhd,palace_hdl"
+VALUE "<project>\designer\impl1\eppwbn_1.adb,adb"
+VALUE "<project>\designer\impl1\eppwbn.prb,prb"
+VALUE "<project>\designer\impl1\eppwbn.stp,stp"
+VALUE "<project>\designer\impl1\eppwbn_1_fp\eppwbn_1.pro,pro"
 ENDUsed_File_List
 ENDLIST
 ENDLIST
@@ -246,18 +400,52 @@ UsePhySynth=FALSE
 UseSynth=TRUE
 ENDLIST
 Used_File_List
-VALUE "<project>\synthesis\eppwbn_ctrl.edn,syn_edn"
 VALUE "<project>\synthesis\eppwbn_ctrl_sdc.sdc,syn_sdc"
-VALUE "<project>\synthesis\eppwbn_ctrl.vhd,syn_hdl"
 VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.edn,palace_edn"
 VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.gcf,palace_gcf"
 VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.pdc,palace_pdc"
 VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.sdc,palace_sdc"
 VALUE "<project>\phy_synthesis\eppwbn_ctrl_palace.vhd,palace_hdl"
-VALUE "<project>\designer\impl1\eppwbn_ctrl.adb,adb"
 VALUE "<project>\designer\impl1\eppwbn_ctrl.prb,prb"
 VALUE "<project>\designer\impl1\eppwbn_ctrl.stp,stp"
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\design\RVI\modular_oscilloscope\synthesis\eppwbn_ctrl.edn,syn_edn"
+VALUE "<project>\synthesis\eppwbn_ctrl.vhd,syn_hdl"
+VALUE "<project>\designer\impl1\eppwbn_ctrl.adb,adb"
 VALUE "<project>\designer\impl1\eppwbn_ctrl_fp\eppwbn_ctrl.pro,pro"
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "eppwbn_test::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+VALUE "F:\Facu Docs\Uni\TF\desarrollo\modular_oscilloscope\design\RVI\modular_oscilloscope\synthesis\eppwbn_test.edn,syn_edn"
+VALUE "<project>\synthesis\eppwbn_test_sdc.sdc,syn_sdc"
+VALUE "<project>\synthesis\eppwbn_test.vhd,syn_hdl"
+VALUE "<project>\phy_synthesis\eppwbn_test_palace.edn,palace_edn"
+VALUE "<project>\phy_synthesis\eppwbn_test_palace.gcf,palace_gcf"
+VALUE "<project>\phy_synthesis\eppwbn_test_palace.pdc,palace_pdc"
+VALUE "<project>\phy_synthesis\eppwbn_test_palace.sdc,palace_sdc"
+VALUE "<project>\phy_synthesis\eppwbn_test_palace.vhd,palace_hdl"
+VALUE "<project>\designer\impl1\eppwbn_test.adb,adb"
+VALUE "<project>\designer\impl1\eppwbn_test.prb,prb"
+VALUE "<project>\designer\impl1\eppwbn_test.stp,stp"
+VALUE "<project>\designer\impl1\eppwbn_test_fp\eppwbn_test.pro,pro"
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "eppwbn_test_wb_side::work::eppwbn_pgk"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
 ENDUsed_File_List
 ENDLIST
 ENDLIST
@@ -273,4 +461,6 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
+DESIGNFLOW:
+ACTIVE_VIEW:0
 ENDLIST

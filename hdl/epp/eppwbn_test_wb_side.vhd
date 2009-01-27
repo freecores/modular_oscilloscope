@@ -42,18 +42,20 @@ end eppwbn_test_wb_side;
 architecture eppwbn_test_wb_arch0 of eppwbn_test_wb_side is
   signal auto_ack: std_logic;
 begin 
+      
+  MEM1: mem_8bit_reset 
+  port map (
+    cs => auto_ack,
+    clk => CLK_I,
+    reset => RST_I,
+    add => ADR_I,    
+    Data_In => DAT_I,
+    Data_Out => DAT_O,
+    WR => WE_I
+  );
   auto_ack <= CYC_I and STB_I;
   ACK_O <= auto_ack;
   
-  MEM1: mem_8bit_reset 
-  port map (
-      cs => auto_ack,
-      clk => CLK_I,
-      reset => RST_I,
-      add => ADR_I,    
-      Data_In => DAT_I,
-      Data_Out => DAT_O,
-      WR => WE_I
-      );
-
+ 
+  
 end architecture eppwbn_test_wb_arch0;

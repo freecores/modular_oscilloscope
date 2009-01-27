@@ -77,7 +77,7 @@ begin
   MA_EPP: eppwbn port map(
       -- Externo
       nStrobe   => nStrobe,                                            
-      Data      => nStrobe,
+      Data      => Data,
       nAck      => nAck,
       busy      => busy,
       PError    => PError,
@@ -99,4 +99,4 @@ begin
       WE_O  => WE_O_master
     );
   
-end architecture eppwbn_test_wb_arch0;
+end architecture eppwbn_test_arch0;

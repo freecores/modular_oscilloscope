@@ -57,7 +57,8 @@
 -------------------------------------------------------------------------------
 
 -- (!)
--- Original file modified to reduce code.
+-- Original file modified to reduce code and make WR and reset signals 
+-- positive and make Reset sincronous
 
 
 library ieee;
@@ -134,25 +135,25 @@ begin  -- spmem_beh
         begin  -- PROCESS
           -- activities triggered by asynchronous reset (active low)
 
-          if reset = '0' then
-            data_out <= (others => DEFAULT_OUT);
-            init_mem ( data);
-
-            -- activities triggered by rising edge of clock
-          elsif clk'event and clk = '1' then
-            if CS = '1' then
-              if WR = '0' then
-                data(conv_integer(add)) <= data_in;
-                data_out                <= (others => DEFAULT_OUT);
-              else
-                data_out                <= data(conv_integer(add));
-              end if;
+          -- activities triggered by rising edge of clock
+          if clk'event and clk = '1' then
+            
+            if reset = '1' then
+              data_out <= (others => DEFAULT_OUT);
+              init_mem ( data);
             else
-              data_out                  <= (others => DEFAULT_OUT);
+              if CS = '1' then
+                if WR = '1' then
+                  data(conv_integer(add)) <= data_in;
+                  data_out                <= (others => DEFAULT_OUT);
+                else
+                  data_out                <= data(conv_integer(add));
+                end if;
+              else
+                data_out                  <= (others => DEFAULT_OUT);
+              end if;
             end if;
-
           end if;
-
         end process;
 --     end generate CS_ENABLED;
 -------------------------------------------------------------------------------

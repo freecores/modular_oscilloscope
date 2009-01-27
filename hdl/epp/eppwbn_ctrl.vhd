@@ -13,7 +13,7 @@
 --| File history:
 --| 	0.01	| nov-2008 | First testing release
 --|   0.20  | dic-2008 | Customs signals without tri-state
---|   0.21  | jan-2009 | Asinc RST_I for Wishbone compatibility
+--|   0.21  | jan-2009 | Sinc reset
 --------------------------------------------------------------------------------
 --| Copyright ® 2008, Facundo Aguilera.
 --|
@@ -93,80 +93,83 @@ begin
   -- estado siguiente
   P_state_comb: process(present_state, next_state, RST_I, nSelectIn, nAutoFd, ext_req_val, nInit, nStrobe) begin
  
-
-    case present_state is
-      
-      when st_compatibility_idle => 
-        PError <= '0';
-        nFault <= '1';
-        Sel <= '1';
-        nAck <= '1';
-             
-        epp_mode <= "00";
+    if RST_I = '1' then
+      next_state <= st_compatibility_idle;
+    else
+      case present_state is
         
-        -- verificación de compatibilidad con 1284
-        if (nAutoFd = '0' and  nSelectIn = '1') then
-          next_state <= st_negotiation2;
-        else
-          next_state <= st_compatibility_idle;
-        end if;
-      
-      when st_negotiation2 =>
-        PError <= '1';
-        nFault <= '1';
-        Sel <= '1';
-        nAck <= '0';
+        when st_compatibility_idle => 
+          PError <= '0';
+          nFault <= '1';
+          Sel <= '1';
+          nAck <= '1';
                
-        epp_mode <= "00"; 
-        
-        -- Reconocimiento del host 
-        if (nStrobe = '1' and
-            nAutoFd = '1') then
+          epp_mode <= "00";
           
-          -- Pedido de modo EPP
-          if (ext_req_val = "01000000") then
-            next_state <= st_initial_epp;
-          
-          -- Otros modos
-          
-          else 
+          -- verificación de compatibilidad con 1284
+          if (nAutoFd = '0' and  nSelectIn = '1') then
+            next_state <= st_negotiation2;
+          else
             next_state <= st_compatibility_idle;
           end if;
-        else
-          next_state <= st_negotiation2;
-        end if;
-      
-      when st_initial_epp =>
-        Sel <= '1';
-        PError <= '1';
-        nFault <= '1';
-        nAck <= '1';
-      
-        epp_mode <= "01";
         
-        -- Finalizaci?n del modo EPP
-        if nInit = '0' then
-          next_state <= st_compatibility_idle;
-        -- Comienzo del primer ciclo EPP
-        elsif (nSelectIn = '0' or nAutoFd = '0') then
+        when st_negotiation2 =>
+          PError <= '1';
+          nFault <= '1';
+          Sel <= '1';
+          nAck <= '0';
+                 
+          epp_mode <= "00"; 
+          
+          -- Reconocimiento del host 
+          if (nStrobe = '1' and
+              nAutoFd = '1') then
+            
+            -- Pedido de modo EPP
+            if (ext_req_val = "01000000") then
+              next_state <= st_initial_epp;
+            
+            -- Otros modos
+            
+            else 
+              next_state <= st_compatibility_idle;
+            end if;
+          else
+            next_state <= st_negotiation2;
+          end if;
+        
+        when st_initial_epp =>
+          Sel <= '1';
+          PError <= '1';
+          nFault <= '1';
+          nAck <= '1';
+        
+          epp_mode <= "01";
+          
+          -- Finalizaci?n del modo EPP
+          if nInit = '0' then
+            next_state <= st_compatibility_idle;
+          -- Comienzo del primer ciclo EPP
+          elsif (nSelectIn = '0' or nAutoFd = '0') then
+            next_state <= st_epp_mode;
+          else
+            next_state <= st_initial_epp;
+          end if;
+        
+        when st_epp_mode =>
+          Sel <= '0';     -- El bus debe asegurar que se puedan usar
+          PError <= '0';  --  las señales definidas por el usuario en el módulo 
+          nFault <= '0';  --  EPP.
+          nAck <= '0';    
+        
+          epp_mode <= "11";
+          
+          -- Finalizaci?n del modo EPP
+          
           next_state <= st_epp_mode;
-        else
-          next_state <= st_initial_epp;
-        end if;
-      
-      when st_epp_mode =>
-        Sel <= '0';     -- El bus debe asegurar que se puedan usar
-        PError <= '0';  --  las señales definidas por el usuario en el módulo 
-        nFault <= '0';  --  EPP.
-        nAck <= '0';    
-      
-        epp_mode <= "11";
-        
-        -- Finalizaci?n del modo EPP
-        
-        next_state <= st_epp_mode;
-                -- Se sale de este estado en forma asíncrona ya que esta acción
-    end case;   --  no tiene handshake.
+                  -- Se sale de este estado en forma asíncrona ya que esta acción
+      end case;   --  no tiene handshake.
+    end if;
     
   end process P_state_comb;
       

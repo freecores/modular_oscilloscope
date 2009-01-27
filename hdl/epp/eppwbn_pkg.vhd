@@ -146,6 +146,19 @@ package eppwbn_pgk is
       );
   end component eppwbn;
   
+  component eppwbn_test_wb_side is
+    port(
+      RST_I:  in std_logic;  
+      CLK_I:  in std_logic;  
+      DAT_I:  in std_logic_vector (7 downto 0);
+      DAT_O:  out std_logic_vector (7 downto 0);
+      ADR_I:  in std_logic_vector (7 downto 0);
+      CYC_I:  in std_logic;  
+      STB_I:  in std_logic;  
+      ACK_O:  out std_logic ;
+      WE_I:   in std_logic
+    );
+  end component eppwbn_test_wb_side;
 	
 end package eppwbn_pgk;
 	

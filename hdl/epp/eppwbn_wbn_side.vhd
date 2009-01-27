@@ -11,6 +11,7 @@
 -------------------------------------------------------------------------------
 --| File history:
 --| 	0.01	| nov-2008 | First release
+--|   0.1   | jan-2009 | Sinc reset
 --------------------------------------------------------------------------------
 --| Copyright ® 2008, Facundo Aguilera.
 --|
@@ -78,34 +79,36 @@ begin
 	-- Data R/W
 	data_strobing: process (inAutoFd, ACK_I, CLK_I, pre_STB_O, RST_I, rst_pp)
 	begin
-		if (rst_pp = '1') then  -- Reset de interfaz EPP
-			data_reg <= "00000000";
-			pre_STB_O <= '0';
-			data_ack <= '0';
-		elsif (CLK_I'event and CLK_I = '1') then
-			if (RST_I = '1') then 	-- Reset de interfaz Wishbone
-				data_reg <= "00000000";
-				pre_STB_O <= '0';
-				data_ack <= '0';
-			else
-				if (inAutoFd = '0') then -- Data strobe
-					pre_STB_O <= '1';
-					if (inStrobe = '0') then -- Escritura EPP
-						data_reg <= iData;
-					end if;
-				end if;
-				if (ACK_I = '1' and pre_STB_O = '1') then -- Dato escrito o leído
-					pre_STB_O <= '0';
-					data_ack <= '1';
-					if (inStrobe = '1') then -- Lectura EPP
-						data_reg <= DAT_I;
-					end if;
-				end if;	
-			end if;
-		end if;
-		if (inAutoFd = '1' and data_ack = '1') then -- iBusy solo se pondrá a cero 
-			data_ack <= '0';													-- una vez que haya respuesta desde la PC
-		end if;
+		
+    if (rst_pp = '1' or RST_I = '1') then  -- Reset de interfaz EPP
+      data_reg <= (others => '0');
+      pre_STB_O <= '0';
+      data_ack <= '0';
+    elsif (CLK_I'event and CLK_I = '1') then
+      if RST_I = '1' then
+        data_reg <= (others => '0');
+        pre_STB_O <= '0';
+        data_ack <= '0';
+      else
+        if (inAutoFd = '0' and data_ack = '0') then -- Data strobe
+          pre_STB_O <= '1';
+          if (inStrobe = '0') then -- Escritura EPP
+            data_reg <= iData;
+          end if;
+        end if;
+        if (ACK_I = '1' and pre_STB_O = '1') then -- Dato escrito o leído
+          pre_STB_O <= '0';
+          data_ack <= '1';
+          if (inStrobe = '1') then -- Lectura EPP
+            data_reg <= DAT_I;
+          end if;
+        end if;	
+      end if;
+    end if;
+    if (inAutoFd = '1' and data_ack = '1') then -- iBusy solo se pondrá a cero 
+      data_ack <= '0';													-- una vez que haya respuesta desde la PC
+    end if;
+    
 	end process;
 	STB_O <= pre_STB_O;
 	CYC_O <= pre_STB_O;
@@ -118,7 +121,7 @@ begin
 	adr_strobing: process (inSelectIn, RST_I, rst_pp)
 	begin
 		if (RST_I = '1' or rst_pp = '1') then
-			adr_reg <= "00000000";
+			adr_reg <= (others => '0');
 		elsif (inSelectIn'event and inSelectIn = '1') then -- Adr strobe
 			if inStrobe = '0' then
 				adr_reg <= iData;
@@ -131,7 +134,7 @@ begin
 	-- Puerto bidireccional
 	iData <= data_reg when (inStrobe = '1' and data_ack = '1') else 
 			 adr_reg when (inStrobe = '1' and adr_ack = '1') else 
-			 "ZZZZZZZZ";
+			 (others => 'Z');
 	
 	
 	
